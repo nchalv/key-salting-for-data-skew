@@ -27,6 +27,7 @@ def random_sampler(filename, k):
 n, p = 1, .3
 words_per_line = int(sys.argv[3])
 lines_in_text = int(sys.argv[2])
+hot_key = sys.argv[4]
 with open ("benchmark.txt", "a") as out:
     out.truncate(0)
 out.close()
@@ -42,7 +43,7 @@ for reps in range(lines_in_text):
     with open ("benchmark.txt", "a") as out:
         for element in s:
             if element:
-                out.write('pepega ')
+                out.write(hot_key+' ')
             else:
                 out.write(wds.pop()+' ')
         out.write('\n')
