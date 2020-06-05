@@ -25,3 +25,12 @@ To run the random skewed text generator type the following:
 `python3 random_text_gen.py ./words.txt l w pepega`.
 
 The output will be stored in `benchmark.txt`.
+
+### Creating the stream on Kafka
+
+The output can be utilized with *Apache Kafka*'s built-in resources to create a
+stream, each record of which consists of a single line of the produced text
+document. To create the stream use the following on a machine where *Appache Kafka*
+is installed and running:
+
+`bin/kafka-producer-perf-test.sh --num-records 100000 --topic test-topic --throughput 10 --payload-file ~/benchmark.txt  --producer-props acks=1 bootstrap.servers=localhost:9092,localhost:9093`
