@@ -12,7 +12,8 @@ probability of success set at *0.3*. In case of success, we insert the selected
 word, in our case *pepega*, in the text. Otherwise, we insert a randomly selected
 word.
 
-We have used a thesaurus of English words available here: [https://github.com/dwyl/english-words](https://github.com/dwyl/english-words).
+We have used a thesaurus of English words available here:
+ [https://github.com/dwyl/english-words](https://github.com/dwyl/english-words).
 
 We repeat the procedure described above ***l*** times, (once for each line in our
 text).
