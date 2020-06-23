@@ -8,7 +8,7 @@ of a *pre-defined number of lines, **l***.
 ### The algorithm
 To create every line of the text, we select a specific word which will act as
 the **hot key**, e.g. *pepega*. We perform ***w*** *Bernoulli trials* with a
-probability of success set at *0.3*. In case of success, we insert the selected
+probability of success set at *p*. In case of success, we insert the selected
 word, in our case *pepega*, in the text. Otherwise, we insert a randomly selected
 word.
 
@@ -22,9 +22,7 @@ text).
 
 To run the random skewed text generator type the following:
 
-`python3 random_text_gen.py thesaurus-path output-path  l w pepega`.
-
-The output will be stored in `benchmark.txt`.
+`python3 random_text_gen.py thesaurus-path output-path  l w pepega p`.
 
 ### Creating the stream on Kafka
 

@@ -24,7 +24,8 @@ def random_sampler(filename, k):
 
 
 
-n, p = 1, .3
+n = 1
+p = int(sys.argv[6])
 words_per_line = int(sys.argv[4])
 lines_in_text = int(sys.argv[3])
 hot_key = sys.argv[5]
