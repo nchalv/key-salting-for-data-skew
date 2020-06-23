@@ -22,7 +22,7 @@ text).
 
 To run the random skewed text generator type the following:
 
-`python3 random_text_gen.py ./words.txt l w pepega`.
+`python3 random_text_gen.py thesaurus-path output-path  l w pepega`.
 
 The output will be stored in `benchmark.txt`.
 

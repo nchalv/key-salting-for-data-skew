@@ -25,10 +25,12 @@ def random_sampler(filename, k):
 
 
 n, p = 1, .3
-words_per_line = int(sys.argv[3])
-lines_in_text = int(sys.argv[2])
-hot_key = sys.argv[4]
-with open ("benchmark.txt", "a") as out:
+words_per_line = int(sys.argv[4])
+lines_in_text = int(sys.argv[3])
+hot_key = sys.argv[5]
+thesaurus = sys.argv[1]
+output = sys.argv[2]
+with open (output, "a") as out:
     out.truncate(0)
 out.close()
 for reps in range(lines_in_text):
@@ -40,7 +42,7 @@ for reps in range(lines_in_text):
     # print (a)
     wds = list(map(lambda x: x.decode("utf-8"), a))
     # print (wds)
-    with open ("benchmark.txt", "a") as out:
+    with open (output, "a") as out:
         for element in s:
             if element:
                 out.write(hot_key+' ')
